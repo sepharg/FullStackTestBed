@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Decision Tech - Coding Exercise";
+}
+
+<div ng-controller="bundleController">
+	<div class="jumbotron">
+		<h1>Decision Tech - Coding Exercise</h1>
+	</div>
+
+	<div class="container">
+		<div class="row showResultsButton">
+			<a class="btn btn-default" ng-click="getBundle(4)">Get Bundle details</a>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8">
+				<div class="panel panel-primary" id="bundleResults">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<strong>Bundle Results</strong>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<dl class="dl-horizontal">
+							<dt>Bundle Id</dt>
+							<dd>{{bundle.bundleId}}</dd>
+							<dt>Provider</dt>
+							<dd>{{bundle.providerName}}</dd>
+							<dt>Contract Name</dt>
+							<dd>{{bundle.name}}</dd>
+							<dt>Contract Length</dt>
+							<dd>{{bundle.contractLengthDisplay}}</dd>
+							<dt>Monthly Cost (w/ line)</dt>
+							<dd>{{bundle.costsWithLineRental.monthlyCostDisplay}}</dd>
+							<dt>Monthly Cost (w/o line)</dt>
+							<dd>{{bundle.costsWithoutLineRental.monthlyCostDisplay}}</dd>
+							<dt>Speed</dt>
+							<dd>{{bundle.downloadSpeedDisplay}}</dd>
+							<dt>Calls</dt>
+							<dd>{{bundle.callsDisplay}}</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
